@@ -2,7 +2,7 @@ FROM node:14-alpine3.15
 
 WORKDIR /usr/src/app
 
-RUN apk update && apk add --no-cache python3 g++ make 
+RUN apk update && apk add --no-cache python2 g++ make 
 
 # Install node dependencies - done in a separate step so Docker can cache it
 COPY package*.json ./
